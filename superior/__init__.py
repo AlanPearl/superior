@@ -63,7 +63,7 @@ def superiorMRO(thistype):
     """
 superiorMRO(thistype)
 
-A useful function which return the superior MRO of a class.
+A useful function which returns the superior MRO of a class.
 
 **Note that superior requires a slight change of the standard MRO 
 to a depth-first strategy, instead of the almost-depth-first
