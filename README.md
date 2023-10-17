@@ -2,9 +2,9 @@
 A proposed inheritance tool to replace Python's super. This micro-project was motivated by and all current tests come from fuhm.net/super-harmful/
 
 # Bugs
--Due to the way superior is implemented (very naively), it may not work if superior is called twice on two different inherited methods. It uses a set to keep track of the parent classes which have already been called for a given object, but doesn't actually track which methods have been called in the parent classes. I will give an example of a fail case below:
+-Due to the way superior is implemented (very naively), it may not work if superior is called twice on two different inherited methods. It uses a set to keep track of the parent classes which have already been called for a given object, but doesn't actually track which methods have been called in the parent classes. The example below would fail if you had used super in place of superior:
 
-"""
+```
 from superior import superior
 
 class Quadrilateral:
@@ -38,4 +38,4 @@ class MrSquare(Square):
               "which sums to", self.sum_of_angles, "in total.")
 
 MrSquare()
-"""
+```
